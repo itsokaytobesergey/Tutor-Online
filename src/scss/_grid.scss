@@ -1,0 +1,67 @@
+@use "sass:math";
+
+$grid_size: 12;
+$grid_row_gap: 28;
+$grid_column_gap: 18;
+
+.cs-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: #{$grid_row_gap}px #{$grid_column_gap}px;
+}
+
+.cs-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: #{$grid_row_gap}px #{$grid_column_gap}px;
+  width: 100%;
+}
+
+.cs-col {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@for $i from 1 through $grid_size {
+  .xs-#{$i} {
+    width: calc(#{percentage(math.div($i, $grid-size))} - #{$grid_row_gap * (1 - math.div($i, $grid-size))}px);
+  }
+}
+
+@media (min-width: 375px) {
+  @for $i from 1 through $grid_size {
+    .sm-#{$i} {
+      width: calc(#{percentage(math.div($i, $grid-size))} - #{$grid_row_gap * (1 - math.div($i, $grid-size))}px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through $grid_size {
+    .md-#{$i} {
+      width: calc(#{percentage(math.div($i, $grid-size))} - #{$grid_row_gap * (1 - math.div($i, $grid-size))}px);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @for $i from 1 through $grid_size {
+    .lg-#{$i} {
+      width: calc(#{percentage(math.div($i, $grid-size))} - #{$grid_row_gap * (1 - math.div($i, $grid-size))}px);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 through $grid_size {
+    .xl-#{$i} {
+      width: calc(#{percentage(math.div($i, $grid-size))} - #{$grid_row_gap * (1 - math.div($i, $grid-size))}px);
+    }
+  }
+}

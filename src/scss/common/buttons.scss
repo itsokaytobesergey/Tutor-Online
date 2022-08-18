@@ -1,0 +1,59 @@
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 30px 7px;
+  height: 40px;
+  box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.38;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  background-color: var(--color-brand);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.9;
+  }
+
+  &--alt {
+    border: 1px solid currentColor;
+    box-shadow: none;
+    color: var(--color-brand);
+    background-color: transparent;
+  }
+
+  &--sm {
+    font-size: 12px;
+    line-height: 1.33;
+    padding: 7px 18px;
+
+    @include mobile-small {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+  }
+}
+
+.button-blank {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}

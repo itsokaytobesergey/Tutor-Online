@@ -1,0 +1,9 @@
+.mobile-menu {
+  display: none;
+
+  &.is-opened {
+    @include mobile {
+      display: block;
+    }
+  }
+}
