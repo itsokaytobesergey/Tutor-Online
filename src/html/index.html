@@ -6,10 +6,63 @@
     <%= _.template(require('./includes/header.html').default)() %>
 
     <main class="main-content">
-      <button type="button" class="button js-modal-btn" data-modal="example-modal">Example modal button</button>
-      <button type="button" class="button js-tooltip-btn" data-tooltip="example-tooltip" data-content="Hello there">
+      <div class="container">
+        <div class="container__main">
+          <div class="main__column-1">
+
+            <p class="main__column-1--text">
+              Индивидуальные онлайн-занятия<br>
+              с репетитором
+            </p>
+            <a href="" class="button main__column-1--button">Записаться на пробный урок</a>
+          </div>
+          <div class="main__column-2">
+            <img class="main__column-2--pic" src="static/images/teacher_card_1.png" alt="">
+          </div>
+          <div class="main__column-3">
+            <div class="main__column-3--advantage">
+              <img src="static/images/advantage_1.png" alt="" class="main__column-3--advantage-pic">
+              <p class="main__column-3--advantage-text">Большой выбор предметов, 
+                подготовка к ОГЭ и ЕГЭ</p>
+            </div>
+            <div class="main__column-3--advantage">
+              <img src="static/images/advantage_2.png" alt="" class="main__column-3--advantage-pic">
+              <p class="main__column-3--advantage-text">Стабильная учебная платформа, работающая без сбоев</p>
+            </div>
+            <div class="main__column-3--advantage">
+              <img src="static/images/advantage_3.png" alt="" class="main__column-3--advantage-pic">
+              <p class="main__column-3--advantage-text">Стоимость занятий от 490 руб.<br> 
+                за академический час
+                </p>
+            </div>
+            <div class="main__column-3--advantage">
+              <img src="static/images/advantage_4.png" alt="" class="main__column-3--advantage-pic">
+              <p class="main__column-3--advantage-text">Наглядные уроки на<br> мультимедийной онлайн-доске</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container cards">
+        <div class="cards__item">
+          <div class="cards__item--text"></div>
+          <div class="cards__item--button"></div>
+          <div class="cards__item--pic"></div>
+        </div>
+        <div class="cards__item">
+<div class="cards__item--text"></div>
+<div class="cards__item--button"></div>
+<div class="cards__item--pic"></div>
+        </div>
+        <div class="cards__item">
+<div class="cards__item--text"></div>
+<div class="cards__item--button"></div>
+<div class="cards__item--pic"></div>
+        </div>
+      </div>
+        <!-- <button type="button" class="button js-modal-btn" data-modal="example-modal">Example modal button</button> -->
+      <!-- <button type="button" class="button js-tooltip-btn" data-tooltip="example-tooltip" data-content="Hello there">
         Example tooltip button
-      </button>
+      </button> -->
     </main>
 
     <%= _.template(require('./includes/footer.html').default)() %>

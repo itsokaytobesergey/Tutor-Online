@@ -1,3 +1,5 @@
+@import 'normalize.scss';
+
 @import '_variables';
 @import '_helpers';
 @import '_media';
@@ -17,3 +19,129 @@
 
 @import 'pages/index';
 
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('woff2 supports variations'),
+    url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('woff2-variations');
+  font-weight: 400 700;
+  color: var(--color-text);
+  // font-stretch: 25% 151%;
+}
+
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+:focus {
+  outline: none;
+}
+.container {
+  max-width: 1366px;
+  padding: 0;
+  margin: 0 auto;
+  border: red 1px solid;
+}
+.container__hero {
+  margin-top: 50px;
+  border: green 1px solid;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+.hero__logo {
+  width: 111px;
+  height: 40px;
+}
+.hero__nav {
+  margin-left: 94px;
+  display: flex;
+  align-items: center;
+}
+.hero__nav--item {
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--color-text);
+  padding-left: 30px;
+}
+.hero__nav--item:first-child {
+  padding-left: 0;
+}
+.hero__nav--item:hover {
+  color: var(--color-blue);
+}
+.hero__controls {
+  margin-left: auto;
+}
+.container__main {
+  display: flex;
+  margin: 40px 80px 0 30px;
+}
+.main__column-1 {
+}
+.main__column-1--text {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.37;
+  width: 477px;
+  height: 189px;
+}
+.main__column-1--button {
+  margin: 0;
+  margin-top: 19px;
+  padding: 18px;
+}
+.main__column-2--pic {
+  width: 308px;
+  height: 238px;
+  transform: translateX(-65px);
+}
+.main__column-2 {
+  margin-top: 121px;
+}
+.main__column-3 {
+  padding-left: 18px;
+}
+.main__column-3--advantage {
+  display: flex;
+  align-items: center;
+}
+.main__column-3--advantage-pic {
+  width: 60px;
+  height: 60px;
+}
+.main__column-3--advantage-text {
+  line-height: 1.35;
+  padding-left: 14px;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.cards__item {
+  width: 390px;
+  height: 261px;
+  border-radius: 30px;
+  background-color: var(--color-blue);
+  margin-top: 80px;
+}
