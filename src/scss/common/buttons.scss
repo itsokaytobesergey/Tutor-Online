@@ -32,6 +32,12 @@
     @media (min-width: $tablet-width-min) and (max-width: $tablet-width-max) {
       display: none;
     }
+    @media (min-width: $tablet-mini-min) and (max-width: $tablet-maxi-max) {
+      display: none;
+    }
+    @media (max-width: $mobile-width-max) {
+      display: none;
+    }
   }
   &--alt:hover {
     background-color: #eef3ff;
