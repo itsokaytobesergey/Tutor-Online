@@ -9,6 +9,7 @@
   cursor: pointer;
   border: 2px solid transparent;
   display: inline-block;
+  white-space: nowrap;
 
   &:hover {
     background-color: #0185ff;
@@ -27,6 +28,10 @@
     margin-left: 46px;
     padding: 12px 14px;
     font-size: 18px;
+
+    @media (min-width: $tablet-width-min) and (max-width: $tablet-width-max) {
+      display: none;
+    }
   }
   &--alt:hover {
     background-color: #eef3ff;

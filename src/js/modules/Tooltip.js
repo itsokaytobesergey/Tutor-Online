@@ -50,7 +50,7 @@ export default class Tooltip {
         ? window.scrollY + btnPosition.top + button.offsetHeight + 10
         : window.scrollY + btnPosition.top - this.tooltip.offsetHeight - 10;
 
-    this.tooltip.style.left = `${btnPosition.left + button.offsetWidth - this.tooltip.offsetWidth}px`;
+    this.tooltip.style.left = `${btnPosition.left + button.offsetWidth / 2 - this.tooltip.offsetWidth / 2}px`;
     this.tooltip.style.top = `${topPos}px`;
 
     this.onOpen(button);

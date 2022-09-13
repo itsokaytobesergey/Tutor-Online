@@ -7,6 +7,7 @@ import { initMobileMenu } from './modules/mobileMenu.js';
 
 // import Swiper from 'swiper/bundle';
 import Swiper, { Navigation, Pagination } from 'swiper';
+import { doc } from 'prettier';
 
 initModals();
 initTooltips();
@@ -46,4 +47,14 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
+
+//menu burger
+const burger = document?.querySelector('.header__controls--burger');
+const menu = document?.querySelector('.menu-mobile');
+const stop = document?.querySelector('[body]');
+
+burger?.addEventListener('click', () => {
+  menu?.classList.toggle('menu-mobile--visible');
+  stop?.classList.toggle('stop-scroll');
 });
