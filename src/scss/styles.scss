@@ -44,7 +44,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   background-color: #fff;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 .stop-scroll {
   overflow: hidden;
@@ -191,36 +191,69 @@ a {
   position: relative;
   border: none;
   width: 35px;
-  height: 29px;
+  height: 28px;
   margin-left: 46px;
   background-color: white;
-
-  &::after {
-    content: '';
-    width: 35px;
-    height: 5px;
-    border-radius: 3px;
-    background-color: var(--color-blue);
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: 0 12px 0 0 var(--color-blue), 0 24px 0 0 var(--color-blue);
-  }
+  cursor: pointer;
+  z-index: 99;
 
   @media (min-width: $tablet-width-min) and (max-width: $tablet-width-max) {
     display: flex;
   }
 }
-.burger--active {
+.burger_line {
+  width: 35px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--color-blue);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease-in-out;
+}
+.header__controls--burger::before,
+.header__controls--burger::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--color-blue);
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+.header__controls--burger::before {
+  top: 0;
+}
+.header__controls--burger::after {
+  bottom: 0;
+}
+.burger--active .burger_line {
+  opacity: 0;
+}
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.burger--active::after {
+  top: 50%;
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+.big_container {
+  margin: 0 auto;
 }
 .menu-mobile {
-  z-index: 99;
+  z-index: 98;
   background-color: #fff;
   width: 800px;
   position: fixed;
   margin-top: 100px;
   transform: translateY(-150%);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  overflow-y: auto;
+  height: calc(100% - 100px);
 }
 .menu-mobile--visible {
   transform: none;
@@ -239,16 +272,17 @@ a {
   display: flex;
   justify-content: center;
 }
-.menu-mobile__item {
-  // font-weight: 600;
-  // font-size: 16px;
-  // line-height: 1.37;
-  // width: 290px;
-  // display: flex;
-  // justify-content: center;
+.menu-mobile__item:nth-child(9) {
+  margin-top: 2px;
+}
+.menu-mobile__item:last-child {
+  margin-top: 8px;
 }
 .menu-mobile__item a {
   color: var(--color-text);
+}
+.menu-mobile__item .footer__info--social-pic:nth-child(2) {
+  margin-left: 20px;
 }
 .menu-mobile__item .button--alt {
   justify-content: center;

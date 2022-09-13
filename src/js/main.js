@@ -52,9 +52,12 @@ const swiper = new Swiper('.swiper', {
 //menu burger
 const burger = document?.querySelector('.header__controls--burger');
 const menu = document?.querySelector('.menu-mobile');
-const stop = document?.querySelector('[body]');
+const body = document.body;
+const button = document?.querySelector('[data-btn]');
 
 burger?.addEventListener('click', () => {
+  body.classList.toggle('stop-scroll');
   menu?.classList.toggle('menu-mobile--visible');
-  stop?.classList.toggle('stop-scroll');
+  burger?.classList.toggle('burger--active');
+  button?.classList.toggle('is_unvisible');
 });
