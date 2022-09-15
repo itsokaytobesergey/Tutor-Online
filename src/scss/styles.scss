@@ -643,7 +643,8 @@ a {
   }
   @media (min-width: $tablet-mini-min) and (max-width: $tablet-maxi-max) {
     margin: 0;
-    width: 600px;
+    // width: 600px;
+    width: calc(100vw - 40px);
   }
   @media (max-width: $mobile-width-max) {
     margin: 0;
