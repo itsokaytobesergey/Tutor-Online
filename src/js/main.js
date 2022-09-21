@@ -50,14 +50,14 @@ const swiper = new Swiper('.swiper', {
 });
 
 //menu burger
-const burger = document?.querySelector('.header__controls--burger');
-const menu = document?.querySelector('.menu-mobile');
+const burger = document.querySelector('.header__controls--burger');
+const menu = document.querySelector('.menu-mobile');
 const body = document.body;
-const button = document?.querySelector('[data-btn]');
+const button = document.querySelector('[data-btn]');
 
 burger?.addEventListener('click', () => {
   body.classList.toggle('stop-scroll');
   menu?.classList.toggle('menu-mobile--visible');
   burger?.classList.toggle('burger--active');
-  button?.classList.toggle('is_unvisible');
+  button?.classList.toggle('is-hidden');
 });
