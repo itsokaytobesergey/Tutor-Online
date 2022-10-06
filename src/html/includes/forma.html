@@ -9,28 +9,41 @@
       <div class="forma__inputs--user">
         <form id="user" method="post" action="">
           <label for="name" class="forma__inputs--label">Имя:</label>
-          <input class="forma__inputs--input" type="text" id="name" placeholder="Оксана">
+          <input class="forma__input" type="text" id="name" placeholder="Оксана">
           <label for="tel" class="forma__inputs--label">Телефон:</label>
-          <input class="forma__inputs--input" type="tel" id="tel" placeholder="+79823346875">
+          <input class="forma__input" type="tel" id="tel" placeholder="+79823346875">
           <label for="subject" class="forma__inputs--label">Предмет:</label>
-          <select class="forma__inputs--input" name="" id="subject">
-            <option value="">Английский язык</option>
-            <option value="">Русский язык</option>
-            <option value="">Литература</option>
-            <option value="">Математика/алгебра</option>
-            <option value="">География</option>
-            <option value="">История</option>
-            <option value="">Биология</option>
-            <option value="">Информатика</option>
-            <option value="">Обществознание</option>
-            <option value="">Начальные классы</option>
-          </select>
+          <div class="dropdownBackground is-hidden" data-id="dropdownBackground"></div>
+          <div class="selector" data-id="selector">
+            <div class="dropdown input"><span data-id="dropdownInput">Выберите предмет</span><svg data-id="dropdownArrow"><use xlink:href="static/images/sprite.svg#dropdown_arrow" /></svg></div>
+              <div class="dropdown menu is-hidden" id="subject" data-id="subject">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item" data-value="english">Английский язык</li>
+                  <li class="dropdown__item" data-value="russian">Русский язык</li>
+                  <li class="dropdown__item" data-value="literature">Литература</li>
+                  <li class="dropdown__item" data-value="math">Математика/алгебра</li>
+                  <li class="dropdown__item" data-value="geography">География</li>
+                  <li class="dropdown__item" data-value="history">История</li>
+                  <li class="dropdown__item" data-value="biology">Биология</li>
+                  <li class="dropdown__item" data-value="informatika">Информатика</li>
+                  <li class="dropdown__item" data-value="obschestvo">Обществознание</li>
+                  <li class="dropdown__item" data-value="pizdyuki">Начальные классы</li>
+                </ul>
+              </div>
+              <input type="text" value="" data-id="input">
+          </div>
           <label for="role" class="forma__inputs--label">Роль:</label>
-          <select class="forma__inputs--input" name="" id="role">
-            <option value="">Родитель</option>
-            <option value="">Ученик</option>
-            <option value="">Учитель</option>
-          </select>
+          <div class="selector">
+            <div class="dropdown input">Выберите роль<svg><use xlink:href="static/images/sprite.svg#dropdown_arrow" /></svg></div>
+              <div class="dropdown menu is-hidden" id="subject">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">Родитель</li>
+                  <li class="dropdown__item">Ученик</li>
+                  <li class="dropdown__item">Учитель</li>
+                </ul>
+              </div>
+              <input type="text">
+          </div>
         </form>
       </div>
       <div class="forma__inputs--button">
