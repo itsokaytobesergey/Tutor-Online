@@ -9,9 +9,6 @@
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/**/*.html"
   },
-  "dependencies": {
-    "swiper": "^8.11.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
@@ -39,5 +36,8 @@
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^4.10.1"
+  },
+  "dependencies": {
+    "swiper": "^8.4.3"
   }
 }

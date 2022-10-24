@@ -83,6 +83,7 @@ body {
   background-color: #fff;
   color: var(--color-text);
   // overflow-y: hidden;
+  margin: 0;
 }
 .stop-scroll {
   overflow: hidden;
@@ -132,5 +133,5 @@ a {
   max-width: 1366px;
   padding: 0;
   margin: 0 auto;
-  outline: red 1px solid;
+  // outline: red 1px solid;
 }

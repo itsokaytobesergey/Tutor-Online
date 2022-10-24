@@ -110,7 +110,6 @@
 .forma__inputs--button {
   grid-column: 3 / 4;
   position: relative;
-  z-index: -1;
 
   @media (max-width: $mobile-width-max) {
     grid-column: none;
@@ -124,6 +123,7 @@
   padding: 10px 34px;
   position: absolute;
   bottom: 0;
+  z-index: 2;
 
   @media (min-width: $tablet-width-min) and (max-width: $tablet-width-max) {
     grid-row: 3/4;
@@ -138,7 +138,7 @@
 .forma__inputs--pic {
   position: relative;
   grid-column: 5 / 6;
-  z-index: -1;
+  z-index: 0;
 
   @media (min-width: $tablet-width-min) and (max-width: $tablet-width-max) {
     grid-column: 3/4;
@@ -182,11 +182,41 @@
 }
 
 //////////
+form {
+  position: relative;
+}
+form .small {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 112px;
+
+  &:first-of-type {
+    top: 39px;
+    @media (max-width: $mobile-width-max) {
+      top: 69px;
+    }
+  }
+  &:last-of-type {
+    top: 98px;
+    @media (max-width: $mobile-width-max) {
+      top: 152px;
+    }
+  }
+  @media (max-width: $mobile-width-max) {
+    left: 0;
+  }
+}
 .selector {
   position: relative;
   // z-index: 100;
   & input {
-    // display: none;
+    display: none;
+  }
+  & small {
+    color: red;
+    font-size: 12px;
+    position: absolute;
   }
 }
 .forma__input,
@@ -244,6 +274,9 @@
     padding: 8px 16px;
     padding-right: 13px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &:first-child {
       padding-top: 16px;
@@ -257,11 +290,19 @@
     &:hover {
       background-color: #d7e6fc;
     }
+
+    &--choosed {
+      background-color: #d7e6fc;
+    }
   }
 
   @media (max-width: $mobile-width-max) {
     margin-top: 6px;
     width: 100%;
+  }
+
+  &.error {
+    border: 1px solid red;
   }
 }
 
@@ -273,5 +314,9 @@
   left: 0;
   background-color: transparent;
   // background-color: rgba($color: red, $alpha: 0.5);
-  z-index: 0;
+  z-index: 1;
+}
+.dropdown__ticket {
+  width: 12px;
+  height: 9px;
 }

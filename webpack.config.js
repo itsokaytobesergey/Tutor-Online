@@ -55,7 +55,7 @@ module.exports = (env, argv) => {
 
   const config = {
     devServer: {
-      host: 'localhost',
+      host: '0.0.0.0',
       port: 8080,
     },
     entry: ['./src/js/main.js', './src/scss/styles.scss'],

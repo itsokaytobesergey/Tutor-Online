@@ -1,4 +1,4 @@
-<div class="container lessons forma">
+<div class="container lessons forma" id="forma">
     <p class="forma__title lessons__title">
       Запись на пробный урок
     </p>
@@ -10,44 +10,48 @@
         <form id="user" method="post" action="">
           <label for="name" class="forma__inputs--label">Имя:</label>
           <input class="forma__input" type="text" id="name" placeholder="Оксана">
+          <small data-id="error_name" class="is-hidden small">Вы не ввели имя</small>
           <label for="tel" class="forma__inputs--label">Телефон:</label>
           <input class="forma__input" type="tel" id="tel" placeholder="+79823346875">
+          <small data-id="error_tel" class="is-hidden small">Вы не ввели номер</small>
           <label for="subject" class="forma__inputs--label">Предмет:</label>
           <div class="dropdownBackground is-hidden" data-id="dropdownBackground"></div>
           <div class="selector" data-id="selector">
-            <div class="dropdown input"><span data-id="dropdownInput">Выберите предмет</span><svg data-id="dropdownArrow"><use xlink:href="static/images/sprite.svg#dropdown_arrow" /></svg></div>
-              <div class="dropdown menu is-hidden" id="subject" data-id="subject">
+            <div class="dropdown input" data-id="dropdownInput"><span data-id="dropdownInputText">Выберите предмет</span><svg data-id="dropdownArrow"><use xlink:href="static/images/sprite.svg#dropdown_arrow" /></svg></div>
+              <div class="dropdown menu is-hidden" data-id="subject" data-number="1">
                 <ul class="dropdown__list">
-                  <li class="dropdown__item" data-value="english">Английский язык</li>
-                  <li class="dropdown__item" data-value="russian">Русский язык</li>
-                  <li class="dropdown__item" data-value="literature">Литература</li>
-                  <li class="dropdown__item" data-value="math">Математика/алгебра</li>
-                  <li class="dropdown__item" data-value="geography">География</li>
-                  <li class="dropdown__item" data-value="history">История</li>
-                  <li class="dropdown__item" data-value="biology">Биология</li>
-                  <li class="dropdown__item" data-value="informatika">Информатика</li>
-                  <li class="dropdown__item" data-value="obschestvo">Обществознание</li>
-                  <li class="dropdown__item" data-value="pizdyuki">Начальные классы</li>
+                  <li class="dropdown__item" data-value="english">Английский язык<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="russian">Русский язык<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="literature">Литература<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="math">Математика/алгебра<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="geography">География<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="history">История<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="biology">Биология<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="informatika">Информатика<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="obschestvo">Обществознание<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="pizdyuki">Начальные классы<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
                 </ul>
               </div>
-              <input type="text" value="" data-id="input">
+              <input type="text" value="" data-id="input" id="subject" required>
+              <small data-id="error" class="is-hidden">Вы не выбрали ни один предмет</small>
           </div>
           <label for="role" class="forma__inputs--label">Роль:</label>
-          <div class="selector">
-            <div class="dropdown input">Выберите роль<svg><use xlink:href="static/images/sprite.svg#dropdown_arrow" /></svg></div>
-              <div class="dropdown menu is-hidden" id="subject">
+          <div class="selector" data-id="selector">
+            <div class="dropdown input" data-id="dropdownInput"><span data-id="dropdownInputText">Выберите роль</span><svg data-id="dropdownArrow"><use xlink:href="static/images/sprite.svg#dropdown_arrow" /></svg></div>
+              <div class="dropdown menu is-hidden" data-id="subject" data-number="2">
                 <ul class="dropdown__list">
-                  <li class="dropdown__item">Родитель</li>
-                  <li class="dropdown__item">Ученик</li>
-                  <li class="dropdown__item">Учитель</li>
+                  <li class="dropdown__item" data-value="parent">Родитель<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="student">Ученик<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
+                  <li class="dropdown__item" data-value="teacher">Учитель<svg class="dropdown__ticket is-hidden" data-id="dropdownTicket"><use xlink:href="static/images/sprite.svg#select" /></svg></li>
                 </ul>
               </div>
-              <input type="text">
+              <input type="text" value="" data-id="input" id="role" required>
+              <small data-id="error" class="is-hidden">Вы не выбрали ни одну роль</small>
           </div>
         </form>
       </div>
       <div class="forma__inputs--button">
-        <button class="button forma-button">Записаться</button>
+        <button class="button forma-button" type="button" form="" data-id="submitButton">Записаться</button>
       </div>
       <div class="forma__inputs--pic">
         <img src="static/images/cat.png" alt="">
