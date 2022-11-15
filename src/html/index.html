@@ -5,12 +5,23 @@
   <body>
     <%= _.template(require('./includes/header.html').default)() %>
 
-    <main class="main-content">
-      <button type="button" class="button js-modal-btn" data-modal="example-modal">Example modal button</button>
-      <button type="button" class="button js-tooltip-btn" data-tooltip="example-tooltip" data-content="Hello there">
+    <%= _.template(require('./includes/main.html').default)() %>
+
+    <%= _.template(require('./includes/cards.html').default)() %>
+    
+    <%= _.template(require('./includes/lessons.html').default)() %>
+
+    <%= _.template(require('./includes/tutors.html').default)() %>
+
+    <%= _.template(require('./includes/process.html').default)() %>
+ 
+    <%= _.template(require('./includes/forma.html').default)() %>
+
+        <!-- <button type="button" class="button js-modal-btn" data-modal="example-modal">Example modal button</button> -->
+      <!-- <button type="button" class="button js-tooltip-btn" data-tooltip="example-tooltip" data-content="Hello there">
         Example tooltip button
-      </button>
-    </main>
+      </button> -->
+
 
     <%= _.template(require('./includes/footer.html').default)() %>
 

@@ -13,7 +13,13 @@
 
 @import 'blocks/header';
 @import 'blocks/mobileMenu';
+@import 'blocks/main.scss';
+@import 'blocks/cards.scss';
+@import 'blocks/lessons.scss';
+@import 'blocks/process.scss';
+@import 'blocks/forma.scss';
 @import 'blocks/footer';
 
 @import 'pages/index';
 
+@import '../../node_modules/swiper/swiper-bundle.css';

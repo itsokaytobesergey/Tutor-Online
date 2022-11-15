@@ -1,36 +1,12 @@
-# Traditional Front Boilerplate
+# Second site
 
-## How to start
+## Дизайн был взят из студии дизайна, которая разработала этот проект в Figma для небольшой компании, занимающейся помощью репетиторам, ученикам и их родителям найти помощь в обучении или преподавании.
 
-1. Install dependencies
+В процессе были использованы следующие технологии : HTML5, SCSS, JS, WebPack, Slider.
 
-```
-npm install
-```
-
-2. Start dev
-
-```
-npm start
-```
-
-3. If you want to build prod
-
-```
-npm run build
-```
-
-It should build `dist` folder with production ready files
-
-## How it works
-
-all assets build to `static` folder, keep in mind or edit `webpack.config.js`
-
-- html files build form `src/html`
-- css bundle builds from `src/scss/styles.scss`
-- js bundle builds from `src/js/main.js`
-- svg sprite builds from `src/sprite`, filenames used for svg symbols ids
-
-## Caveats
-
-Html templates list prepares only on start. If you need to add new template file, consider to restart dev server
+- Была произведена вёрстка с проекта в Figma
+- Вся вёрстка была разбита на компоненты для лучшей читабельности и простоты рефакторинга
+- С помощью JS была написана логика работы бургер-меню и окна формы
+- Все файлы стилей были написаны на препроцессоре Sass, а также были разделены на компоненты
+- Сборщик Webpack был взят готовый (Traditional Front Boilerplate), были внесены небольшие изменения
+- В процессе разработки, был использован плагин Slider для создания карточек репетиторов
